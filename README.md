@@ -2,11 +2,16 @@ Lottery Simulation (6/36 Game) – EE 300 Probability Project
 
 Student: Luka Nergadze 
 
+
+
 Project Overview
 
 This project simulates a 6/36 lottery to study discrete probabilistic events. 
 Both theoretical probabilities (hypergeometric distribution) and empirical 
 probabilities from MATLAB simulations are computed and compared.
+
+
+
 
 Key points:
 
@@ -29,7 +34,10 @@ Random variable X = # of matches → {0,1,2,3,4,5,6}
 X follows a hypergeometric distribution
 ​
 
-Events Studied
+
+
+
+Events Studied: 
 
 Main outcomes: X = 0…6
 
@@ -62,6 +70,9 @@ Fake prize pool: $1,000,000
 Payouts based on matches (3 → small, 4 → medium, 5 → big, 6 → jackpot)
 
 
+
+
+
 Conclusion
 
 Theoretical and empirical results match closely
@@ -69,6 +80,9 @@ Theoretical and empirical results match closely
 Simulation demonstrates combinatorial reasoning and probability concepts
 
 Multiple events and graphs confirm correct implementation and reproducibility
+
+
+
 
 
 Files
@@ -80,6 +94,8 @@ simulateLottery.m
 theoreticalProbabilities.m
 
 pmf_cdf.m
+
+
 
 
 References
