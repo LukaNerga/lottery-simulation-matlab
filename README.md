@@ -1,109 +1,85 @@
-Lottery Simulation (6/36 Game) – EE 300 Probability Project
+# 6/36 Lottery Simulation 🎲
 
-Student: Luka Nergadze 
+## Project Description
+This project analyzes a 6/36 lottery game using theoretical probability and Monte Carlo simulation. The goal is to compare exact hypergeometric probabilities with empirical results, analyze extra probability events, and simulate prize pool distribution.
 
+This project was developed as part of an EE300 probability/statistics assignment.
 
+## Project Overview
+- Lottery type: 6/36  
+- Each ticket selects 6 distinct numbers from 36  
+- A fixed winning combination is generated  
+- Each simulated ticket is compared against the winning numbers  
+- The number of matches (0–6) is recorded  
+- Results are analyzed numerically and visually  
 
-Project Overview
+Randomness is controlled using a fixed random seed for reproducibility.
 
-This project simulates a 6/36 lottery to study discrete probabilistic events. 
-Both theoretical probabilities (hypergeometric distribution) and empirical 
-probabilities from MATLAB simulations are computed and compared.
+## Objectives
+- Compute exact probabilities for 0–6 matches  
+- Estimate probabilities using Monte Carlo simulation  
+- Compare empirical and theoretical results  
+- Analyze additional probability events  
+- Simulate prize pool distribution  
+- Visualize PMF, CDF, and simulation variability  
 
+## Probability Model
+The number of matches follows a hypergeometric distribution:
+- Population size: 36  
+- Success states: 6  
+- Number of draws: 6  
 
+The probability of getting exactly k matches (k = 0–6) is computed analytically and used as a reference.
 
+## Simulation Details
+- Up to 1,000,000 tickets are simulated  
+- Each ticket contains 6 unique numbers  
+- Simulation is executed in blocks to avoid memory issues  
+- Matches with the winning combination are counted  
+- Empirical probabilities are computed from frequencies  
 
-Key points:
+Multiple runs are performed to demonstrate statistical variability.
 
-Sampling without replacement
+## Output Summary
+- Winning number combination  
+- Table of matches vs empirical and theoretical probabilities  
+- Empirical PMF and CDF  
+- Extra probability event results  
+- Prize pool distribution and estimated payouts  
 
-Monte Carlo simulation with 1,000,000 tickets
+## Extra Probability Events
+- Probability of winning money (X ≥ 3)  
+- Probability of a big win (X ≥ 5)  
+- Probability a ticket contains number 7  
+- Probability a ticket contains a number divisible by 3  
+- Probability a ticket contains exactly one number divisible by 5  
 
-Analysis includes PMF, CDF, and graphs
+All are computed analytically using combinatorics.
 
-Reproducibility using fixed seeds
+## Prize Pool Simulation
+- Total prize pool: $1,000,000  
+- Prize categories: 3, 4, 5, and 6 matches  
+- Pool is distributed using weighted percentages  
+- Winner counts come from simulation results  
+- Average payout per winner is calculated  
 
-Random Experiment
+## Visualizations
+- Empirical vs theoretical distribution  
+- PMF and CDF plots  
+- Extra event probability plots  
+- Comparison of multiple simulation runs  
 
-Winning ticket: 6 distinct numbers from 1–36
+## Requirements
+- MATLAB or GNU Octave  
+- No external toolboxes required  
 
-Player ticket: 6 distinct numbers from 1–36
+## Possible Extensions
+- Other lottery formats (6/42, 5/50, etc.)  
+- Expected value per ticket  
+- Performance optimization  
+- Data export  
+- Confidence intervals  
 
-Random variable X = # of matches → {0,1,2,3,4,5,6}
-
-X follows a hypergeometric distribution
-​
-
-
-
-
-Events Studied: 
-
-Main outcomes: X = 0…6
-
-Extra events:
-
-Win money: X ≥ 3
-
-Big win: X ≥ 5
-
-Ticket contains 7
-
-At least one number divisible by 3
-
-Exactly one number divisible by 5
-
-Simulation & Results
-
-MATLAB code generates 1,000,000 random tickets
-
-Empirical PMF closely matches theory
-
-Graphs include PMF, CDF, and extra event charts
-
-Fixed vs random seeds demonstrate reproducibility and randomness
-
-Prize Money Simulation
-
-Fake prize pool: $1,000,000
-
-Payouts based on matches (3 → small, 4 → medium, 5 → big, 6 → jackpot)
-
-
-
-
-
-Conclusion
-
-Theoretical and empirical results match closely
-
-Simulation demonstrates combinatorial reasoning and probability concepts
-
-Multiple events and graphs confirm correct implementation and reproducibility
-
-
-
-
-
-Files
-
-runLotterySimulation.m
-
-simulateLottery.m
-
-theoreticalProbabilities.m
-
-pmf_cdf.m
-
-
-
-
-References
-
-EE 300 Course Materials, SDSU Georgian Campus
-
-Ross, S. M. (2014). Introduction to Probability and Statistics for Engineers and Scientists
-
-MATLAB Documentation
-
-ChatGPT & Claude (2025) — for explanations and code formatting
+## Author
+**Luka Nergadze**  
+EE300 – Lottery Simulation & Probability Analysis
